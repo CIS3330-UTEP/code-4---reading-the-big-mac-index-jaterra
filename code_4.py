@@ -53,16 +53,25 @@ def get_the_most_expensive_big_mac_price_by_year(year):
     return output
 
 if __name__ == "__main__":
+
+    year = input("year: ")
+    country_code = input("country code: ")
    
 
-    result_a = get_big_mac_price_by_year(2010, "arg")
+    result_a = get_big_mac_price_by_year(year, country_code)
     print(result_a)
-    result_b = get_big_mac_price_by_country("mex")
+    result_b = get_big_mac_price_by_country(country_code)
     print(result_b)
-    result_c = get_the_cheapest_big_mac_price_by_year(2008)
+    result_c = get_the_cheapest_big_mac_price_by_year(year)
     print(result_c)
-    result_d = get_the_most_expensive_big_mac_price_by_year(2014)
+    result_d = get_the_most_expensive_big_mac_price_by_year(year)
     print(result_d)
+    
+
+    # print(get_big_mac_price_by_year(year, country_code))
+    # print(get_big_mac_price_by_country(country_code))
+    # print(get_the_cheapest_big_mac_price_by_year(year))
+    # print(get_the_most_expensive_big_mac_price_by_year(year))
 
 
 

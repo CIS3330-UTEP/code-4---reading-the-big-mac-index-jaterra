@@ -55,13 +55,13 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 if __name__ == "__main__":
 
     
-    while True:
-        year = int(input("Enter a year (2000 - 2022): "))
+    # while True:
+    #     year = int(input("Enter a year (2000 - 2022): "))
 
-        if 2000 <= year <= 2022:
-            break
-        else:
-            print("Invalid input. Please enter a valid year.")
+    #     if 2000 <= year <= 2022:
+    #         break
+    #     else:
+    #         print("Invalid input. Please enter a valid year.")
 
             
     valid_country_codes = [
@@ -73,21 +73,59 @@ if __name__ == "__main__":
     'kwt', 'lbn', 'mda', 'nic', 'omn', 'qat', 'rou'
 ]
 
+    # while True:
+    #     country_code = input("Enter a country code: ")
+    #     if country_code in valid_country_codes:
+    #         break
+    #     else:
+    #         print("Invalid input. Please enter a valid country code.")
+        
+   
+
+    # result_a = get_big_mac_price_by_year(year, country_code)
+    while True:
+        year = int(input("Enter a year (2000 - 2022): "))
+
+        if 2000 <= year <= 2022:
+            break
+        else:
+            print("Invalid input. Please enter a valid year.")
+
     while True:
         country_code = input("Enter a country code: ")
         if country_code in valid_country_codes:
             break
         else:
             print("Invalid input. Please enter a valid country code.")
-        
-   
-
     result_a = get_big_mac_price_by_year(year, country_code)
     print(result_a)
+    # result_b = get_big_mac_price_by_country(country_code)
+    while True:
+        country_code = input("Enter a country code: ")
+        if country_code in valid_country_codes:
+            break
+        else:
+            print("Invalid input. Please enter a valid country code.")
     result_b = get_big_mac_price_by_country(country_code)
     print(result_b)
+    # result_c = get_the_cheapest_big_mac_price_by_year(year)
+    while True:
+        year = int(input("Enter a year (2000 - 2022): "))
+
+        if 2000 <= year <= 2022:
+            break
+        else:
+            print("Invalid input. Please enter a valid year.")
     result_c = get_the_cheapest_big_mac_price_by_year(year)
     print(result_c)
+    # result_d = get_the_most_expensive_big_mac_price_by_year(year)
+    while True:
+        year = int(input("Enter a year (2000 - 2022): "))
+
+        if 2000 <= year <= 2022:
+            break
+        else:
+            print("Invalid input. Please enter a valid year.")
     result_d = get_the_most_expensive_big_mac_price_by_year(year)
     print(result_d)
     

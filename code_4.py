@@ -54,8 +54,32 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
 if __name__ == "__main__":
 
-    year = input("year: ")
-    country_code = input("country code: ")
+    
+    while True:
+        year = int(input("Enter a year (2000 - 2022): "))
+
+        if 2000 <= year <= 2022:
+            break
+        else:
+            print("Invalid input. Please enter a valid year.")
+
+            
+    valid_country_codes = [
+    'arg', 'aus', 'bra', 'can', 'che', 'chl', 'chn', 'cze', 'dnk', 'euz',
+    'gbr', 'hkg', 'hun', 'idn', 'isr', 'jpn', 'kor', 'mex', 'mys', 'nzl',
+    'pol', 'rus', 'sgp', 'swe', 'tha', 'twn', 'usa', 'zaf', 'phl', 'nor',
+    'per', 'tur', 'ven', 'egy', 'col', 'cri', 'lka', 'pak', 'sau', 'ukr',
+    'ury', 'are', 'ind', 'vnm', 'aze', 'bhr', 'gtm', 'hnd', 'hrv', 'jor',
+    'kwt', 'lbn', 'mda', 'nic', 'omn', 'qat', 'rou'
+]
+
+    while True:
+        country_code = input("Enter a country code: ")
+        if country_code in valid_country_codes:
+            break
+        else:
+            print("Invalid input. Please enter a valid country code.")
+        
    
 
     result_a = get_big_mac_price_by_year(year, country_code)

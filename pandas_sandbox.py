@@ -125,19 +125,19 @@
 
 
 # MEAN
-import pandas as pd
+# import pandas as pd
 
-filename = "./big-mac-full-index.csv"
-df = pd.read_csv(filename)
+# filename = "./big-mac-full-index.csv"
+# df = pd.read_csv(filename)
 
-print(df['dollar_price'])
+# print(df['dollar_price'])
 
-query = f"(iso_a3 == 'MEX')"
-mxn_df = df.query(query)
+# query = f"(iso_a3 == 'MEX')"
+# mxn_df = df.query(query)
 
-print(mxn_df['dollar_price'].min())
-print(mxn_df['dollar_price'].max())
-print(round(mxn_df['dollar_price'].mean(), 2))
+# print(mxn_df['dollar_price'].min())
+# print(mxn_df['dollar_price'].max())
+# print(round(mxn_df['dollar_price'].mean(), 2))
 
 
 
@@ -196,3 +196,15 @@ print(round(mxn_df['dollar_price'].mean(), 2))
 # arg_df = df.query(query)
 
 # print(arg_df)
+
+
+
+import pandas as pd
+
+filename = "./big-mac-full-index.csv"
+df = pd.read_csv(filename)
+
+iso_a3_values = df['iso_a3'].unique()
+
+for iso_a3 in iso_a3_values:
+    print(iso_a3)

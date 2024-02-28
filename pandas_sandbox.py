@@ -199,12 +199,3 @@
 
 
 
-import pandas as pd
-
-filename = "./big-mac-full-index.csv"
-df = pd.read_csv(filename)
-
-iso_a3_values = df['iso_a3'].unique()
-
-for iso_a3 in iso_a3_values:
-    print(iso_a3)
